@@ -1,6 +1,6 @@
 # Weather App
 
-This is a android app that provides weathe data from api 
+```This is a android app that provides weather data from api ```
 
 # App Features!
 
