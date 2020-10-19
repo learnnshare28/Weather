@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="240dp"
+    android:id="@+id/parentRelative"
+    android:layout_marginEnd="@dimen/spacing_medium"
+    android:layoutDirection="locale"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:paddingBottom="@dimen/spacing_medium">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/shimmer"
+        android:layout_weight="1">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/shimmer"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/day_name_text_view"
+                    style="@style/TextViewInColoredCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="#EEEEEE"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/weather_image_view"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/temp_text_view"
+                    style="@style/TextViewInColoredCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="#EEEEEE" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</LinearLayout>
